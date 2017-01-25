@@ -28,7 +28,6 @@ public class FontManager {
         WizardManager wmgr = new WizardManager();   //7
         TumblrManager tmgr = new TumblrManager();   //5
         BlocksManager blmgr = new BlocksManager();  //0
-        
         ReverseHandler rh = new ReverseHandler();   //8
         SmallApexHandler smh = new SmallApexHandler();  //9
         MoreTumblrHandler mth = new MoreTumblrHandler();    //10
@@ -42,7 +41,6 @@ public class FontManager {
         inlineQueryResults.add(wmgr.getPreparedFont(queryText));
         inlineQueryResults.add(tmgr.getPreparedFont(queryText));
         inlineQueryResults.add(blmgr.getPreparedFont(queryText));
-        
         inlineQueryResults.add(smh.getPreparedFont(queryText));
         inlineQueryResults.add(rh.getPreparedFont(queryText));
         inlineQueryResults.add(mth.getPreparedFont(queryText));
