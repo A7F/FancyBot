@@ -7,14 +7,12 @@ import org.telegram.telegrambots.api.objects.inlinequery.result.InlineQueryResul
  *
  * @author Luke
  */
-public class WizardManager implements BotFunctions{
-    public static final String WIZARD_CHARS = "ค๒ς๔єŦﻮђเןкl๓ภ๏קợгรtยשฬץאz";
-    public static final String WIZARD_NUMBERS = "⓿₁߶კ４５₆₇ȣ⑨";
+public class CompressedManager implements BotFunctions{
+    public static final String COMPR_CHARS = "ΔҌﾧdﾼԲɢￃΙۆӃﾤϺﾢﾷϸϘЯଌȚȗѵ￦ҲעŻ";
     
-    public String toWizard(String string){
+    public String toCompressed(String string){
         StringBuilder sb = new StringBuilder();
-        char[] wizardcaps = WIZARD_CHARS.toCharArray();
-        char[] numbers = WIZARD_NUMBERS.toCharArray();
+        char[] compressedLow = COMPR_CHARS.toCharArray();
         
         char[] tmp = string.toCharArray();
         
@@ -22,16 +20,12 @@ public class WizardManager implements BotFunctions{
             int index = tmp[i];
             int temp_lowercase = 96;
             int temp_uppercase = 64;
-            int temp_number = 47;
             
             if(index<=122 && index>=97){
-                sb.append(wizardcaps[index-temp_lowercase-1]);
+                sb.append(compressedLow[index-temp_lowercase-1]);
             }
             else if(index<=90 && index>=65){
-                sb.append(wizardcaps[index-temp_uppercase-1]);
-            }
-            else if(index<=57 && index>=48){
-                sb.append(numbers[index-temp_number-1]);
+                sb.append(compressedLow[index-temp_uppercase-1]);
             }
             else if(index==32){
                 sb.append(' ');
@@ -48,11 +42,11 @@ public class WizardManager implements BotFunctions{
     public InlineQueryResultArticle getPreparedFont(String input) {
         InlineQueryResultArticle article = new InlineQueryResultArticle();
         
-        article.setTitle("Wizard");
-        article.setId("7");
-        article.setDescription(toWizard(input));
+        article.setTitle("Compressed");
+        article.setId("13");
+        article.setDescription(toCompressed(input));
         InputTextMessageContent messageContent = new InputTextMessageContent();
-        messageContent.setMessageText(toWizard(input));
+        messageContent.setMessageText(toCompressed(input));
         messageContent.disableWebPagePreview();
         messageContent.enableMarkdown(false);
         article.setInputMessageContent(messageContent);

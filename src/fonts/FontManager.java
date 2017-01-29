@@ -20,31 +20,37 @@ public class FontManager {
     }
     
     public void populateResult(){
-        FullwidthManager fwd = new FullwidthManager();  //2
-        StrikeManager sm = new StrikeManager(); //4
-        SmallcapsManager smm = new SmallcapsManager();  //3
-        BubbleManager bmgr = new BubbleManager();   //1
-        UpdownManager udmgr = new UpdownManager();  //6
-        WizardManager wmgr = new WizardManager();   //7
-        TumblrManager tmgr = new TumblrManager();   //5
-        BlocksManager blmgr = new BlocksManager();  //0
-        ReverseHandler rh = new ReverseHandler();   //8
-        SmallApexHandler smh = new SmallApexHandler();  //9
-        MoreTumblrHandler mth = new MoreTumblrHandler();    //10
-        OrientalHandler orh = new OrientalHandler();    //11
+        BlocksManager m0 = new BlocksManager();
+        BubbleManager m1 = new BubbleManager();  
+        FullwidthManager m2 = new FullwidthManager(); 
+        SmallcapsManager m3 = new SmallcapsManager(); 
+        StrikeManager m4 = new StrikeManager();
+        TumblrManager m5 = new TumblrManager();
+        UpdownManager m6 = new UpdownManager();
+        WizardManager m7 = new WizardManager();
+        ReverseHandler m8 = new ReverseHandler(); 
+        SmallApexHandler m9 = new SmallApexHandler();
+        MoreTumblrHandler m10 = new MoreTumblrHandler();
+        OrientalHandler m11 = new OrientalHandler();
+        SeemsGreekManager m12 = new SeemsGreekManager();
+        CompressedManager m13 = new CompressedManager();
+        BarManager m14 = new BarManager();
         
-        inlineQueryResults.add(fwd.getPreparedFont(queryText));
-        inlineQueryResults.add(sm.getPreparedFont(queryText));
-        inlineQueryResults.add(smm.getPreparedFont(queryText));
-        inlineQueryResults.add(bmgr.getPreparedFont(queryText));
-        inlineQueryResults.add(udmgr.getPreparedFont(queryText));
-        inlineQueryResults.add(wmgr.getPreparedFont(queryText));
-        inlineQueryResults.add(tmgr.getPreparedFont(queryText));
-        inlineQueryResults.add(blmgr.getPreparedFont(queryText));
-        inlineQueryResults.add(smh.getPreparedFont(queryText));
-        inlineQueryResults.add(rh.getPreparedFont(queryText));
-        inlineQueryResults.add(mth.getPreparedFont(queryText));
-        inlineQueryResults.add(orh.getPreparedFont(queryText));
+        inlineQueryResults.add(m2.getPreparedFont(queryText));
+        inlineQueryResults.add(m4.getPreparedFont(queryText));
+        inlineQueryResults.add(m3.getPreparedFont(queryText));
+        inlineQueryResults.add(m1.getPreparedFont(queryText));
+        inlineQueryResults.add(m6.getPreparedFont(queryText));
+        inlineQueryResults.add(m7.getPreparedFont(queryText));
+        inlineQueryResults.add(m5.getPreparedFont(queryText));
+        inlineQueryResults.add(m0.getPreparedFont(queryText));
+        inlineQueryResults.add(m9.getPreparedFont(queryText));
+        inlineQueryResults.add(m8.getPreparedFont(queryText));
+        inlineQueryResults.add(m10.getPreparedFont(queryText));
+        inlineQueryResults.add(m11.getPreparedFont(queryText));
+        inlineQueryResults.add(m12.getPreparedFont(queryText));
+        inlineQueryResults.add(m13.getPreparedFont(queryText));
+        inlineQueryResults.add(m14.getPreparedFont(queryText));
     }
     
     
